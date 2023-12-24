@@ -4,6 +4,23 @@ let tasks = [];
 let global_id = 0;
 let filter = 0; // 0->no filter, 1->active, 2->completed
 
+// Example task
+tasks.push({
+    text: "This is an example task!",
+    finished: false,
+    id: global_id,
+});
+global_id++;
+
+tasks.push({
+    text: "This is another example task!",
+    finished: false,
+    id: global_id,
+});
+global_id++;
+
+renderTasks();
+
 // Add new tasks
 const textInput = document.getElementById('task-text-input');
 
@@ -30,6 +47,7 @@ function renderTasks() {
 
     console.log(tasks);
 
+    const tasksLeftLabel = document.getElementById("tasks-left-label");
     const tasksContainer = document.getElementById("tasks-container");
     tasksContainer.innerHTML = "";
 
@@ -69,6 +87,9 @@ function renderTasks() {
 
         tasksContainer.appendChild(newTask);
     });
+
+    const tasksLeft = tasks.filter(t => t.finished === false);
+    tasksLeftLabel.innerHTML = "Items left: " + tasksLeft.length + "/" + tasks.length;
 }
 
 // Remove task with specific id 

@@ -17,6 +17,7 @@
             <input type="text" id="task-text-input" name="task-text-input" placeholder="So much to do, so little time">
         </div>
 
+        <!-- These two tasks are just to see their structure, they are overwritten as soon as JS is loaded. -->
         <div class="tasks-container" id="tasks-container">
             <div class="task task-finished" id="task1">
                 <button type="button" class="mark-task-as-done-button">Mark as done</button>
@@ -32,7 +33,7 @@
         </div>
 
         <div class="bottom-buttons">
-            <label class="tasks-left-label">Items left: 0/0</label>
+            <label class="tasks-left-label" id="tasks-left-label">Items left: 0/0</label>
             <button class="filter-button" onclick="removeFilter()">All</button>
             <button class="filter-button" onclick="activeFilter()">Active</button>
             <button class="filter-button" onclick="finishedFilter()">Completed</button>
