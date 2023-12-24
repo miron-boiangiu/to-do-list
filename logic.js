@@ -70,7 +70,6 @@ function renderTasks() {
         }
     
         const newMarkAsDoneButton = document.createElement("button");
-        newMarkAsDoneButton.innerHTML = "Mark as done";
         newMarkAsDoneButton.classList.add("mark-task-as-done-button");
         newMarkAsDoneButton.onclick = function(){switchFinishedStateOfClassWithId(e.id)};
         newTask.appendChild(newMarkAsDoneButton);

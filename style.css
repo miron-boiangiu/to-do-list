@@ -32,6 +32,21 @@ body {
     visibility: visible;
 }
 
+.task-finished .mark-task-as-done-button {
+    background-image: url("images/finished.png");
+}
+
+.mark-task-as-done-button {
+    background-color: transparent;
+    background-image: url("images/ongoing.png");
+    background-size: contain;
+    border: none;
+    color: #000000;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+}
+
 .remove-task-button {
     visibility: hidden;
     background-color: transparent;
