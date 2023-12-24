@@ -18,6 +18,10 @@ body {
     top: 15%;
 }
 
+.text-button {
+
+}
+
 .top-buttons {
     text-align: center;
     padding-left: 5%;
@@ -43,6 +47,8 @@ body {
 }
 
 .mark-task-as-done-button {
+    flex-grow: 0;
+    flex: 1;
     background-color: transparent;
     background-image: url("images/ongoing.png");
     background-size: contain;
@@ -50,11 +56,13 @@ body {
     border: none;
     color: #000000;
     cursor: pointer;
-    height: 20px;
-    width: 20px;
+    height: 30px;
+    width: 30px;
 }
 
 .remove-task-button {
+    flex-grow: 0;
+    flex: 1;
     visibility: hidden;
     background-color: transparent;
     background-image: url("images/x.png");
@@ -63,19 +71,28 @@ body {
     border: none;
     color: #000000;
     cursor: pointer;
-    height: 20px;
-    width: 20px;
+    height: 30px;
+    width: 30px;
 }
 
 .task {
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
     padding-top: 10px;
     text-align: center;
     padding-bottom: 10px;
     border-bottom: 1px solid rgb(190, 190, 190);
 }
 
-.task-finished label{
+.task-finished .task-label{
     text-decoration: line-through;
+}
+
+.task-label {
+    flex-grow: 1;
+    flex: 20;
 }
 
 .task:last-child {

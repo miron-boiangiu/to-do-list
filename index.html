@@ -16,7 +16,7 @@
     <div class="to-do-container">
 
         <div class="top-buttons">
-            <button type="button" onclick="markAllTasksAsDone()">Mark all as done</button>
+            <button class="text-button" type="button" onclick="markAllTasksAsDone()">Mark all as done</button>
             <input type="text" id="task-text-input" name="task-text-input" placeholder="So much to do, so little time">
         </div>
 
@@ -37,10 +37,10 @@
 
         <div class="bottom-buttons">
             <label class="tasks-left-label" id="tasks-left-label">Items left: 0/0</label>
-            <button class="filter-button" onclick="removeFilter()">All</button>
-            <button class="filter-button" onclick="activeFilter()">Active</button>
-            <button class="filter-button" onclick="finishedFilter()">Completed</button>
-            <button class="clear-completed-button" onclick="removeAllCompletedTasks()">Clear completed</button>
+            <button class="filter-button text-button" onclick="removeFilter()">All</button>
+            <button class="filter-button text-button" onclick="activeFilter()">Active</button>
+            <button class="filter-button text-button" onclick="finishedFilter()">Completed</button>
+            <button class="clear-completed-button text-button" onclick="removeAllCompletedTasks()">Clear completed</button>
         </div>
 
     </div>
