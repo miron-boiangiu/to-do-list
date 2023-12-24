@@ -35,6 +35,14 @@ function renderTasks() {
 
     tasks.forEach(e => {
 
+        if (filter === 1 && e.finished === true) {
+            return;
+        }
+
+        if (filter === 2 && e.finished === false) {
+            return;
+        }
+
         const newTask = document.createElement("div");
         newTask.classList.add("task");
         newTask.id = "task" + e.id;
@@ -76,7 +84,7 @@ function removeTaskWithId(id) {
 function switchFinishedStateOfClassWithId(id) {
 
     tasks.forEach(e => {
-        if (e.id == id) {
+        if (e.id === id) {
             e.finished = !e.finished;
         }
     })
@@ -91,5 +99,24 @@ function markAllTasksAsDone() {
         e.finished = true;
     })
 
+    renderTasks();
+}
+
+// Filters
+function removeFilter() {
+
+    filter = 0;
+    renderTasks();
+}
+
+function activeFilter() {
+
+    filter = 1;
+    renderTasks();
+}
+
+function finishedFilter() {
+
+    filter = 2;
     renderTasks();
 }
