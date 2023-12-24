@@ -63,7 +63,6 @@ function renderTasks() {
         newTask.appendChild(newTaskLabel);
 
         const newRemoveTaskButton = document.createElement("button");
-        newRemoveTaskButton.innerHTML = "Remove task";
         newRemoveTaskButton.classList.add("remove-task-button");
         newRemoveTaskButton.onclick = function(){removeTaskWithId(e.id)};
         newTask.appendChild(newRemoveTaskButton);

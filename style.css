@@ -28,6 +28,22 @@ body {
     padding-bottom: 10px; */
 }
 
+.task:hover .remove-task-button {
+    visibility: visible;
+}
+
+.remove-task-button {
+    visibility: hidden;
+    background-color: transparent;
+    background-image: url("images/x.png");
+    background-size: contain;
+    border: none;
+    color: #000000;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+}
+
 .task {
     padding-top: 10px;
     text-align: center;
