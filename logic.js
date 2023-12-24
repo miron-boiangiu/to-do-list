@@ -5,19 +5,26 @@ let global_id = 0;
 let filter = 0; // 0->no filter, 1->active, 2->completed
 
 // Example tasks
-tasks.push({
-    text: "This is an example task!",
-    finished: false,
-    id: global_id,
-});
-global_id++;
 
-tasks.push({
-    text: "This is another example task!",
-    finished: false,
-    id: global_id,
-});
-global_id++;
+if (localStorage.getItem("global_id") !== null) {
+    global_id = localStorage.getItem("global_id");
+    tasks = JSON.parse(localStorage.getItem("tasks"));
+}
+else {
+    tasks.push({
+        text: "This is an example task!",
+        finished: false,
+        id: global_id,
+    });
+    global_id++;
+    
+    tasks.push({
+        text: "This is another example task!",
+        finished: false,
+        id: global_id,
+    });
+    global_id++;
+}
 
 renderTasks();
 
@@ -89,6 +96,9 @@ function renderTasks() {
 
     const tasksLeft = tasks.filter(t => t.finished === false);
     tasksLeftLabel.innerHTML = "Items left: " + tasksLeft.length + "/" + tasks.length;
+
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+    localStorage.setItem("global_id", global_id);
 }
 
 // Remove task with specific id 
