@@ -52,6 +52,7 @@ function renderTasks() {
         const newRemoveTaskButton = document.createElement("button");
         newRemoveTaskButton.innerHTML = "Remove task";
         newRemoveTaskButton.classList.add("remove-task-button");
+        newRemoveTaskButton.onclick = function(){removeTaskWithId(e.id)};
         newTask.appendChild(newRemoveTaskButton);
 
         tasksContainer.appendChild(newTask);
@@ -62,6 +63,6 @@ function renderTasks() {
 function removeTaskWithId(id) {
 
     tasks = tasks.filter(e => e.id != id);
-    
+
     renderTasks();
 }
