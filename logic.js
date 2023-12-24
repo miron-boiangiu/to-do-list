@@ -38,10 +38,15 @@ function renderTasks() {
         const newTask = document.createElement("div");
         newTask.classList.add("task");
         newTask.id = "task" + e.id;
+
+        if (e.finished) {
+            newTask.classList.add("task-finished");
+        }
     
         const newMarkAsDoneButton = document.createElement("button");
         newMarkAsDoneButton.innerHTML = "Mark as done";
         newMarkAsDoneButton.classList.add("mark-task-as-done-button");
+        newMarkAsDoneButton.onclick = function(){switchFinishedStateOfClassWithId(e.id)};
         newTask.appendChild(newMarkAsDoneButton);
 
         const newTaskLabel = document.createElement("label");
@@ -63,6 +68,18 @@ function renderTasks() {
 function removeTaskWithId(id) {
 
     tasks = tasks.filter(e => e.id != id);
+
+    renderTasks();
+}
+
+// Mark tash with specific id as finished
+function switchFinishedStateOfClassWithId(id) {
+
+    tasks.forEach(e => {
+        if (e.id == id) {
+            e.finished = !e.finished;
+        }
+    })
 
     renderTasks();
 }
