@@ -9,5 +9,34 @@
 </head>
 <body>
     
+    <div class="to-do-container">
+
+        <div class="top-buttons">
+            <button type="button">Mark all as done</button>
+            <input type="text" id="task-text-input" name="task-text-input" placeholder="New task text">
+        </div>
+
+        <div class="tasks-container">
+            <div class="task" id="task1">
+                <button type="button" class="mark-task-as-done-button">Mark as done</button>
+                <label class="task-label">Task text here!</label>
+                <button type="button" class="remove-task-button">Remove task</button>
+            </div>
+
+            <div class="task" id="task2">
+                <button type="button" class="mark-task-as-done-button">Mark as done</button>
+                <label class="task-label">Task text here!</label>
+                <button type="button" class="remove-task-button">Remove task</button>
+            </div>
+        </div>
+
+        <div class="bottom-buttons">
+            <label class="tasks-left-label">Items left: 0/0</label>
+            <button class="filter-button">All</button>
+            <button class="filter-button">Active</button>
+            <button class="filter-button">Completed</button>
+        </div>
+
+    </div>
 </body>
 </html>
