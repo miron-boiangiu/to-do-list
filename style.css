@@ -69,11 +69,6 @@ body {
     display: flex;
 }
 
-.tasks-container {
-    /* padding-top: 10px;
-    padding-bottom: 10px; */
-}
-
 .task:hover .remove-task-button {
     visibility: visible;
 }
@@ -152,4 +147,8 @@ body {
 
 .tasks-left-label {
     margin-right: 10px;
+}
+
+.clear-completed-button {
+    margin-left: 10px;
 }

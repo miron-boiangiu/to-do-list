@@ -4,7 +4,7 @@ let tasks = [];
 let global_id = 0;
 let filter = 0; // 0->no filter, 1->active, 2->completed
 
-// Example task
+// Example tasks
 tasks.push({
     text: "This is an example task!",
     finished: false,
@@ -114,9 +114,19 @@ function switchFinishedStateOfClassWithId(id) {
 // Mark all tasks as done
 function markAllTasksAsDone() {
 
-    tasks.forEach(e => {
-        e.finished = true;
-    })
+    const unfinishedTasks = tasks.filter(e => e.finished === false);
+
+    if (unfinishedTasks.length === 0) {
+
+        tasks.forEach(e => {
+            e.finished = false;
+        })
+
+    } else {
+        tasks.forEach(e => {
+            e.finished = true;
+        })
+    }
 
     renderTasks();
 }
