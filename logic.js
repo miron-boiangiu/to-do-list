@@ -124,17 +124,35 @@ function markAllTasksAsDone() {
 // Filters
 function removeFilter() {
 
+    [...document.getElementsByClassName("filter-button")].forEach(b => {
+        b.classList.remove("active-filter-button");
+    });
+
+    document.getElementById("filter-all-button").classList.add("active-filter-button");
+
     filter = 0;
     renderTasks();
 }
 
 function activeFilter() {
 
+    [...document.getElementsByClassName("filter-button")].forEach(b => {
+        b.classList.remove("active-filter-button");
+    });
+
+    document.getElementById("filter-active-button").classList.add("active-filter-button");
+
     filter = 1;
     renderTasks();
 }
 
 function finishedFilter() {
+
+    [...document.getElementsByClassName("filter-button")].forEach(b => {
+        b.classList.remove("active-filter-button");
+    });
+
+    document.getElementById("filter-finished-button").classList.add("active-filter-button");
 
     filter = 2;
     renderTasks();

@@ -37,9 +37,9 @@
 
         <div class="bottom-buttons">
             <label class="tasks-left-label" id="tasks-left-label">Items left: 0/0</label>
-            <button class="filter-button text-button" onclick="removeFilter()">All</button>
-            <button class="filter-button text-button" onclick="activeFilter()">Active</button>
-            <button class="filter-button text-button" onclick="finishedFilter()">Completed</button>
+            <button class="filter-button text-button active-filter-button" id="filter-all-button" onclick="removeFilter()">All</button>
+            <button class="filter-button text-button" id="filter-active-button" onclick="activeFilter()">Active</button>
+            <button class="filter-button text-button" id="filter-finished-button" onclick="finishedFilter()">Completed</button>
             <button class="clear-completed-button text-button" onclick="removeAllCompletedTasks()">Clear completed</button>
         </div>
 

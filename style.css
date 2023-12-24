@@ -19,6 +19,10 @@ body {
     border-radius: 4px;
 }
 
+.text-button:active {
+    background-color: #363636;
+}
+
 .text-button {
     flex: 5;
     cursor: pointer;
@@ -30,6 +34,10 @@ body {
     text-decoration: none;
     padding: 5px 8px;
     border-radius: 4px;
+}
+
+.active-filter-button {
+    background-color: #363636;
 }
 
 #task-text-input:focus {
