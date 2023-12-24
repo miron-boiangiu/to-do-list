@@ -120,3 +120,10 @@ function finishedFilter() {
     filter = 2;
     renderTasks();
 }
+
+// Remove all tasks which are completed
+function removeAllCompletedTasks() {
+
+    tasks = tasks.filter(e => e.finished === false);
+    renderTasks();
+}
