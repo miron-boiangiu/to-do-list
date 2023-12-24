@@ -83,3 +83,13 @@ function switchFinishedStateOfClassWithId(id) {
 
     renderTasks();
 }
+
+// Mark all tasks as done
+function markAllTasksAsDone() {
+
+    tasks.forEach(e => {
+        e.finished = true;
+    })
+
+    renderTasks();
+}
